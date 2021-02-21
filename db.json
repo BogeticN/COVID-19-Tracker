@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Pera",
+      "email": "peraperic@pera.com",
+      "password": "Asdf1234"
+    },
+    {
+      "username": "Marko",
+      "password": "12345678",
+      "email": "marko@g.com",
+      "id": 2
+    },
+    {
+      "username": "Perazxc",
+      "email": "asdas@ascz.com",
+      "password": "1111",
+      "id": 3
+    },
+    {
+      "username": "asda",
+      "email": "asd@asd.com",
+      "password": "asdffA1",
+      "id": 4
+    },
+    {
+      "username": "asdaz",
+      "email": "asdz@asdz.com",
+      "password": "Asdfs1",
+      "id": 5
+    }
+  ]
+}
