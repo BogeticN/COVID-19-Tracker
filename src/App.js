@@ -10,33 +10,28 @@ import Countries from "./components/Countries"
 const App = () => {
 
     const [user, setUser] = useState(null)
-    const [allCountries,setAllCountries] = useState([])
+    const [allCountries, setAllCountries] = useState([])
 
     useEffect(() => {
         getAllCountries().then(res => {
             setAllCountries(res.data)
         })
-    },[])
+    }, [])
     console.log(allCountries)
     return (
         <Router>
-            <Nav />
-
-            <Route path="/">
-                <Home user={user} />
-            </Route>
-            <Countries allCountries={allCountries}/>
-
+            <Nav user={user} setUser={setUser}/>
             <Switch>
                 <Route path="/login">
-                    <Login  setUser={setUser} user={user} />
+                    <Login setUser={setUser} user={user} />
                 </Route>
                 <Route path="/register">
                     <Register />
                 </Route>
-                
+                <Route path="/">
+                    <Home allCountries={allCountries}/>
+                </Route>
             </Switch>
-            {user ? <button onClick={() => setUser(null)}>Log out</button> : null}
         </Router>
     );
 }
