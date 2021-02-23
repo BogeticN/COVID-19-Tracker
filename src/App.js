@@ -4,7 +4,8 @@ import Login from "./components/Login"
 import Register from "./components/Register"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Nav from "./components/Nav"
-import { getAllCountries, getContinents, getHistoricalStats } from "./service"
+import { getAllCountries, getBalkan, getContinents, getHistoricalStats } from "./service"
+import CountryDetails from "./components/CountryDetails"
 
 
 
@@ -14,6 +15,7 @@ const App = () => {
     const [allCountries, setAllCountries] = useState([])
     const [historyStats, setHistoryStats] = useState([])
     const [continents, setContinents] = useState([])
+    const [balkanCountries, setBalkanCountries] = useState([])
 
     useEffect(() => {
         getHistoricalStats().then(res => {
@@ -22,20 +24,28 @@ const App = () => {
     }, [])
     useEffect(() => {
         getContinents().then(res => {
-            console.log(res.data)
+            // console.log(res.data)
             setContinents(res.data)
-        })  
+        })
     }, [])
     useEffect(() => {
         getAllCountries().then(res => {
             setAllCountries(res.data)
+            console.log(res.data)
+
+        })
+    }, [])
+    useEffect(() => {
+        getBalkan().then(res => {
+            // console.log(res.data)
+            setBalkanCountries(res.data)
         })
     }, [])
 
-    let days = Object.keys(historyStats.cases ? historyStats.cases : historyStats).map(k => k)
-    let cases = Object.values(historyStats.cases ? historyStats.cases : historyStats).map(k => k)
-    let deaths = Object.values(historyStats.deaths ? historyStats.deaths : historyStats).map(k => k)
-    let recovered = Object.values(historyStats.recovered ? historyStats.recovered : historyStats).map(k => k)
+    let days = Object.keys(historyStats.cases ? historyStats.cases : historyStats)
+    let cases = Object.values(historyStats.cases ? historyStats.cases : historyStats)
+    let deaths = Object.values(historyStats.deaths ? historyStats.deaths : historyStats)
+    let recovered = Object.values(historyStats.recovered ? historyStats.recovered : historyStats)
 
 
     return (
@@ -49,6 +59,9 @@ const App = () => {
                     <Route path="/register">
                         <Register />
                     </Route>
+                    <Route path="/:country">
+                        <CountryDetails allCountries={allCountries} user={user}/>
+                    </Route>
                     <Route path="/">
                         <Home
                             continents={continents}
@@ -57,6 +70,7 @@ const App = () => {
                             days={days} deaths={deaths}
                             cases={cases}
                             recovered={recovered}
+                            balkanCountries={balkanCountries}
                         />
                     </Route>
                 </Switch>

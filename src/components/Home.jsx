@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react"
 import { getWorldStats } from "../service"
+import BarChart from "./BarChart"
 // import BasicTable from "./BasicTable"
 import Countries from "./Countries"
-import DoughnutChart from "./DoughnutChart"
+import PieChart from "./PieChart"
 import LineChart from "./LineChart"
 
 
-const Home = ({ continents,allCountries,historyStats,days,cases,deaths,recovered }) => {
+const Home = ({ balkanCountries,continents,allCountries,historyStats,days,cases,deaths,recovered }) => {
 
     const [worldStats, setWorldStats] = useState([])
 
@@ -28,11 +29,10 @@ const Home = ({ continents,allCountries,historyStats,days,cases,deaths,recovered
                 <div>Active:{worldStats.active?.toLocaleString()}</div>
                 <div>Last updated:{String(new Date(worldStats.updated).toLocaleString())}</div>
             </div>
-            <Countries allCountries={allCountries} />
-            <div>
+            <Countries allCountries={allCountries} days={days}/>
             <LineChart historyStats={historyStats} days={days} deaths={deaths} cases={cases} recovered={recovered}/>
-            <DoughnutChart continents={continents}/>
-            </div>
+            <PieChart continents={continents}/>
+            <BarChart balkanCountries={balkanCountries}/>
         </>
     )
 }

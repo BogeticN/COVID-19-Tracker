@@ -1,22 +1,15 @@
-import { Pie } from 'react-chartjs-2'
+import { Doughnut } from 'react-chartjs-2'
 
 
-const PieChart = ({ continents }) => {
-
-
-    // console.log(days)
-    // console.log(recovered)
-
-    let allContinents = continents.map(continent => continent.continent)
-    let allCases = continents.map(continent => continent.cases)
+const SingleDoughnutChart = ({ countryDetail }) => { 
 
 
     const data = {
-        labels: allContinents,
+        labels: ['Total cases','Active cases','Deaths','Recoveries'],
         datasets: [
             {
-                label: 'Total cases by continents',
-                data: allCases ,
+                label: 'Statistics for today',
+                data: [countryDetail?.casesPerOneMillion,countryDetail?.activePerOneMillion,countryDetail?.deathsPerOneMillion,countryDetail?.recoveredPerOneMillion],
                 backgroundColor: [
                     'rgba(255, 206, 86, 0.2)',
                     'rgba(255, 206, 86, 0.2)',
@@ -30,14 +23,14 @@ const PieChart = ({ continents }) => {
     const options = {
         title: {
             display: true,
-            text: 'Pie Chart'
+            text: 'Statistics per 1 million people'
         }
     }
     return (
         <>
-            <Pie data={data} options={options} />
+            <Doughnut data={data} options={options} />
         </>
     )
 }
 
-export default PieChart
+export default SingleDoughnutChart

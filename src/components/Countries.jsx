@@ -1,7 +1,5 @@
 import Country from "./Country"
 import '../main.css'
-// import { useTable } from 'react-table'
-// import { COLUMNS } from `./columns`
 
 
 const Countries = ({ allCountries }) => {
@@ -18,6 +16,7 @@ const Countries = ({ allCountries }) => {
                         <th>Recovered</th>
                         <th>Population</th>
                     </tr>
+                        {/* {allCountries.map(country => <Link to={`/country/${country.countryInfo._id}`} key={country.country} country={country} >{country.country}</Link>)} */}
                         {allCountries.map(country => <Country key={country.country} country={country} />)}
                 </tbody>
             </table>

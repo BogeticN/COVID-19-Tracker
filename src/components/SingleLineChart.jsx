@@ -1,11 +1,7 @@
 import { Line } from 'react-chartjs-2'
 
 
-const LineChart = ({days,cases,deaths,recovered} ) => {
-    
-
-    // console.log(days)
-    // console.log(recovered)
+const SingleLineChart = ({days,cases,recovered,deaths,error} ) => {
     const data = {
         labels: days,
         datasets: [
@@ -38,15 +34,15 @@ const LineChart = ({days,cases,deaths,recovered} ) => {
     const options = {
         title:{
             display:true,
-            text: 'Total cases over time'
+            text: 'Total cases over last 30 days'
         },
         scales:{
             yAxes: [
                 {
                     ticks: {
                         min: 0,
-                        max: 120000000,
-                        stepSize: 20000000
+                        max: Math.max(...cases),
+                        stepSize: cases / 5
                     }
                 }
             ]
@@ -59,4 +55,4 @@ const LineChart = ({days,cases,deaths,recovered} ) => {
     )
 }
 
-export default LineChart
+export default SingleLineChart
