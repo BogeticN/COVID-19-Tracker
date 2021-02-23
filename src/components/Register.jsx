@@ -4,10 +4,6 @@ import { useHistory } from 'react-router-dom'
 import { useState } from "react"
 
 
-
-
-
-
 const Register = () => {
 
     const [username, setUsername] = useState()

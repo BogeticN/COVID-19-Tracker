@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react"
 import { getWorldStats } from "../service"
+// import BasicTable from "./BasicTable"
 import Countries from "./Countries"
+import DoughnutChart from "./DoughnutChart"
+import LineChart from "./LineChart"
 
 
-const Home = ({ allCountries }) => {
+const Home = ({ continents,allCountries,historyStats,days,cases,deaths,recovered }) => {
 
     const [worldStats, setWorldStats] = useState([])
 
@@ -13,10 +16,6 @@ const Home = ({ allCountries }) => {
             // console.log(res.data)
         })
     }, [])
-
-
-
-    // console.log(`${new Date().getHours()}:${new Date().getMinutes()}`)
 
 
     return (
@@ -30,6 +29,10 @@ const Home = ({ allCountries }) => {
                 <div>Last updated:{String(new Date(worldStats.updated).toLocaleString())}</div>
             </div>
             <Countries allCountries={allCountries} />
+            <div>
+            <LineChart historyStats={historyStats} days={days} deaths={deaths} cases={cases} recovered={recovered}/>
+            <DoughnutChart continents={continents}/>
+            </div>
         </>
     )
 }
