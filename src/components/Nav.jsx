@@ -4,7 +4,7 @@ const Nav = ({ user,setUser }) => {
     return (
         <>
             <nav>
-                <span>Covid-19 Tracker</span>
+                <h1>Covid-19 Tracker</h1>
                 <Link style={{ padding: 5 }} to="/">Home</Link>
                 {
                     user

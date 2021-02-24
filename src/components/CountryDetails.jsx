@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { Redirect, useParams } from "react-router-dom"
 import { getOneCountryHistory } from "../service"
-import SingleDoughnutChart from "./SingleDoughnutChart"
-import SingleLineChart from "./SingleLineChart"
+import SingleLineChart from "./Charts/SingleLineChart"
+import SingleDoughnutChart from "./Charts/SingleDoughnutChart"
 
 const CountryDetails = ({ allCountries, user }) => {
 
@@ -24,7 +24,7 @@ const CountryDetails = ({ allCountries, user }) => {
         })
         return () => mounted = false
     }, [])
-    console.log(countryDetail)
+
     return user ? (
         <>
             <div>
@@ -38,10 +38,11 @@ const CountryDetails = ({ allCountries, user }) => {
                 <p>Today cases:{countryDetail?.todayCases.toLocaleString()}</p>
                 <p>Today deaths:{countryDetail?.todayDeaths.toLocaleString()}</p>
             </div>
-            {oneCountryHistory ? <SingleLineChart days={days} cases={cases} deaths={deaths} recovered={recovered} />
+            <SingleDoughnutChart countryDetail={countryDetail} />
+            {oneCountryHistory ?
+                <SingleLineChart days={days} cases={cases} deaths={deaths} recovered={recovered} />
                 :
                 "Oops!Sorry,but there is no data on total cases over the last 30 days for this country"}
-            <SingleDoughnutChart countryDetail={countryDetail} />
         </>
     )
         :

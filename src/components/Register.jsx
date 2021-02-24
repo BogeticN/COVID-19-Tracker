@@ -10,11 +10,8 @@ const Register = () => {
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const [error, setError] = useState('')
+    
     const history = useHistory()
-
-    const setErrorHelper = (text) => {
-        setError(text)
-    }
 
     console.log(password)
     let regEx = /(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])/

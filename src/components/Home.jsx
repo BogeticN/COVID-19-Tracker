@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react"
 import { getWorldStats } from "../service"
-import BarChart from "./BarChart"
-// import BasicTable from "./BasicTable"
+import BarChart from "./Charts/BarChart"
 import Countries from "./Countries"
-import PieChart from "./PieChart"
-import LineChart from "./LineChart"
+import PieChart from "./Charts/PieChart"
+import LineChart from "./Charts/LineChart"
 
 
 const Home = ({ balkanCountries,continents,allCountries,historyStats,days,cases,deaths,recovered }) => {
@@ -29,7 +28,7 @@ const Home = ({ balkanCountries,continents,allCountries,historyStats,days,cases,
                 <div>Active:{worldStats.active?.toLocaleString()}</div>
                 <div>Last updated:{String(new Date(worldStats.updated).toLocaleString())}</div>
             </div>
-            <Countries allCountries={allCountries} days={days}/>
+            <Countries allCountries={allCountries} />
             <LineChart historyStats={historyStats} days={days} deaths={deaths} cases={cases} recovered={recovered}/>
             <PieChart continents={continents}/>
             <BarChart balkanCountries={balkanCountries}/>

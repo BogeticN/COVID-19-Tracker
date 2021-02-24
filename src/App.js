@@ -16,6 +16,7 @@ const App = () => {
     const [historyStats, setHistoryStats] = useState([])
     const [continents, setContinents] = useState([])
     const [balkanCountries, setBalkanCountries] = useState([])
+    
 
     useEffect(() => {
         getHistoricalStats().then(res => {
@@ -31,8 +32,7 @@ const App = () => {
     useEffect(() => {
         getAllCountries().then(res => {
             setAllCountries(res.data)
-            console.log(res.data)
-
+            // console.log(res.data)
         })
     }, [])
     useEffect(() => {
