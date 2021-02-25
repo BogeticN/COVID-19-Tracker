@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { getWorldStats } from "../service"
 import BarChart from "./Charts/BarChart"
-import Countries from "./Countries"
+import Countries from "./Countries/Countries"
 import PieChart from "./Charts/PieChart"
 import LineChart from "./Charts/LineChart"
 
@@ -20,7 +20,7 @@ const Home = ({ balkanCountries,continents,allCountries,historyStats,days,cases,
 
     return (
         <>
-            <div style={{ border: 'solid black 1px' }}>
+            <div style={{ border: 'solid black 1px',textAlign:'center' }}>
                 <h1>World statistics</h1>
                 <div>Total cases:{worldStats.cases?.toLocaleString()}</div>
                 <div>Deaths:{worldStats.deaths?.toLocaleString()}</div>

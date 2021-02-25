@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Nav from "./components/Nav"
 import { getAllCountries, getBalkan, getContinents, getHistoricalStats } from "./service"
 import CountryDetails from "./components/CountryDetails"
+import Footer from "./components/Footer"
+import './main.css'
 
 
 
@@ -75,6 +77,7 @@ const App = () => {
                     </Route>
                 </Switch>
             </Router>
+            <Footer/>
         </>
     );
 }
