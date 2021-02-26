@@ -2,9 +2,8 @@ import styled from 'styled-components'
 
 export const StyledTable = styled.table`
 
- 
     font-family: "Arial Black", Gadget, sans-serif;
-    border: 2px solid #000000;
+    border: 2px solid #415172;
     background-color: #4A4A4A;
     width: 60%;
     height: 200px;
@@ -14,7 +13,6 @@ export const StyledTable = styled.table`
     line-height:2.5;
     
     
-  
    td, table th {
     border: 1px solid #4A4A4A;
     padding: 3px 2px;

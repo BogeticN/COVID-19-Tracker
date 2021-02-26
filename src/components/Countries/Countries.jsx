@@ -1,8 +1,9 @@
 import Country from "../Country"
 import { useState } from "react"
 import Select from "../Select"
-import { StyledTable } from "./StyledCountries"
-// import '../../main.css'
+import { StyledTable } from "./StyledTable"
+import { StyledDiv } from './StyledInput'
+// import { StyledPage } from './StyledButtons'
 
 function rangeArray(start, finish) {
     let tmp = []
@@ -24,13 +25,13 @@ const Countries = ({ allCountries }) => {
     let pagesNumbers = rangeArray(1, numberOfPages + 1)
 
     return (
-        <div style={{ textAlign: 'center' }}>
-            <div className="blabla">
-                <div className='bla'>
+        <div >
+            <StyledDiv >
+                <div className='select'>
                     <span>Show</span><Select setSelectNumber={setSelectNumber} /><span>countries</span>
                 </div>
                 <input type="search" placeholder='Search countries...' onChange={(e) => setSearchInput(e.target.value)}></input>
-            </div>
+            </StyledDiv>
 
             <StyledTable >
                 <tbody>
@@ -42,10 +43,13 @@ const Countries = ({ allCountries }) => {
                         <th>Population</th>
                     </tr>
                     {filteredCountries.slice(selectNumber * (page - 1), selectNumber * page).map(country => <Country key={country.country} country={country} />)}
-
                 </tbody>
             </StyledTable>
-            {pagesNumbers.map(pageNumber => <button style={{ marginTop: '1rem' }} key={pageNumber} onClick={() => setPage(pageNumber)}>{pageNumber}</button>)}
+
+
+            {pagesNumbers.map(pageNumber => <button className="btn btn-secondary" key={pageNumber} onClick={() => setPage(pageNumber)}>{pageNumber}</button>)}
+
+
         </div>
     )
 }

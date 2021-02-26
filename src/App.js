@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
-import Home from "./components/Home"
+import Home from "./components/Home/Home"
 import Login from "./components/Login"
 import Register from "./components/Register"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Nav from "./components/Nav"
+import Nav from "./components/Nav/Nav"
 import { getAllCountries, getBalkan, getContinents, getHistoricalStats } from "./service"
 import CountryDetails from "./components/CountryDetails"
 import Footer from "./components/Footer"

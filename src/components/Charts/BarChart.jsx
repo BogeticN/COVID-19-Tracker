@@ -62,8 +62,35 @@ const BarChart = ({ balkanCountries }) => {
     const options = {
         title: {
             display: true,
-            text: 'Balkan peninsula statistics'
+            text: 'Balkan peninsula statistics',
+            fontColor:'white'
+        },
+        scales:{
+            yAxes:[
+                {
+                    ticks:{
+                        fontColor:"white",
+                    }
+                }
+            ],
+            xAxes: [
+                {
+                    gridLines:{
+                        display:true,
+                    },
+                    ticks: {
+                        fontColor:"white",
+                    }
+                }
+            ]
+        },
+        legend: {
+            labels: {
+                fontSize: 13,
+                fontColor:'white'
+            }
         }
+        
     }
     return (
         <>

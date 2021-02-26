@@ -1,35 +1,78 @@
 *{
     margin:auto;
-    box-sizing: border-box;
+    box-sizing: border-box!important;
+    background-color: #1a202c;
+    color:#f7fafc;
+    font-family: 'Aleo'!important;
+    font-size: 22px!important;
+	text-align: center;
 }
-body{
-    background-color: navajowhite;
+h1 {
+	font-size: 55px!important
 }
-.bla {
-    display: inline-block;
-    /* margin-left: 15px; */
-    /* margin-right: 150px; */
-    height: 30px;
-    line-height: 1.8 
+ /* .container{
+	display: flex;
+	margin: 20px auto;
+	width: 100%;
+	height: 400px;
+	grid-template-columns: 200px 300px;
+	align-items: center;
+	  grid-row: auto auto;
+	  grid-column-gap: 20px;
+	  grid-row-gap: 20px;
 }
-input{
-     margin-top:1rem;
-     margin-bottom: 1rem;
-     /* margin-left: 350px */
-     /* position: absolute; */
-     /* align-items: right; */
-     /* display: block; */
-     /* margin-right: 150px; */
-    width: 200px;
-    height: 25px;
+.text-card {
+	width: 250px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	text-align: center;
+	display: grid;
+	background-color: #39455f;
+  }
+  
+.heading {
+	  background-color: #FF9100;
+	  color: #ed8936;
+	  padding: 40px 10px;
+	  font-size: 40px;
+	  background-color: #39455f;
+  }
+  
+.text-box {
+	  padding:10px;
+	  background-color: #39455f;
+  }
+
+.text-card p,h2{
+	font-size: 33px!important;
+	background-color: #39455f;
 }
 
-.blabla {
-    margin-top:1rem;
-    /* padding-left: 150px; */
-    /* padding-right: 150px; */
-    width: 80%;
-    display: flex;
-    flex-direction: row!important;
-    text-align: center;
+.date{
+	font-size: 10px!important;
+	text-align: center;
+	display: block;
+	height: 13px;
+} */
+/* .date p {
+	font-size: 11px!important;
+}  */
+.test {
+    height: 50%!important;
+    width: 100%;
+    display: inline-block
+}
+.test1{
+    width: 50%!important;
+    margin-top:40px!important;
+    margin-bottom:40px!important;
+    padding: 40px;
+    background-color: #39455f;
+    color: white;
+    display: block;
+    border-radius: 30px;
+}
+canvas{
+    background-color: #39455f!important;
+    color: white;
 }

@@ -15,7 +15,7 @@ const LineChart = ({days,cases,deaths,recovered} ) => {
                 borderColor: ['rgba(255, 206, 86, 0.2)'],
                 backgroundColor: ['rgba(255, 206, 86, 0.2)'],
                 pointBackgroundColor: 'rgba(255, 206, 86, 0.2)',
-                pointBorderColor: 'rgba(255, 206, 86, 0.2)'
+                pointBorderColor: 'rgba(255, 206, 86, 0.2)',
             },
             {
                 label:'Deaths',
@@ -33,12 +33,13 @@ const LineChart = ({days,cases,deaths,recovered} ) => {
                 pointBackgroundColor: 'rgba(193, 240, 193, 0.4)',
                 pointBorderColor: 'rgba(193, 240, 193, 0.4)'
             }
-        ]
+        ],
     }
     const options = {
         title:{
             display:true,
-            text: 'Total cases over time'
+            text: 'Total cases over time',
+            fontColor:'white'
         },
         scales:{
             yAxes: [
@@ -46,10 +47,25 @@ const LineChart = ({days,cases,deaths,recovered} ) => {
                     ticks: {
                         min: 0,
                         max: 120000000,
-                        stepSize: 20000000
-                    }
+                        stepSize: 20000000,
+                        fontColor: "white",
+                    },
                 }
-            ]
+            ],
+            xAxes: [{
+                gridLines: {
+                    display: true, 
+                },
+                ticks: {
+                    fontColor: "white",
+                }
+            }],
+        },
+        legend: {
+            labels: {
+                fontSize: 13,
+                fontColor:'white'
+            }
         }
     }
     return (
