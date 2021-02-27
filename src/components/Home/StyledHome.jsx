@@ -13,8 +13,13 @@ export const StyledHome = styled.div`
 	display:inline-block;
 	text-align: center;
 	background-color: #39455f;
+	-webkit-box-shadow: 24px 21px 62px -4px rgba(12,13,38,1);
+	-moz-box-shadow: 24px 21px 62px -4px rgba(12,13,38,1);
+	box-shadow: 24px 21px 62px -4px rgba(12,13,38,1);
+	/* margin-left:30px;
+	margin-right:30px; */
   }
-.text-card p,h2{
+.text-card p{
 	font-size: 33px!important;
 	background-color: #39455f;
 }
@@ -28,19 +33,59 @@ export const StyledHome = styled.div`
 	  background-color: #39455f;
 	}
 .total-cases {
-		   border:1px solid rgb(133, 131, 131);
-		 }
-.deaths {
-	border:1px solid rgb(194, 88, 88)
+	border:1px solid rgb(133, 131, 131);
 }
+.total-cases p{
+	color:rgb(133, 131, 131)
+}
+		 
+.deaths {
+	border:1px solid rgb(194, 88, 88);
+
+	
+}
+.deaths p{
+	color: rgb(194, 88, 88)
+}
+
 .active{
-	border:1px solid rgb(102, 117, 187)
+	border:1px solid rgb(102, 117, 187);
+
+}
+.active p{
+	color:rgb(102, 117, 187)
 }
 .recovered{
-	border:1px solid rgb(102, 187, 106)
+	border:1px solid rgb(102, 187, 106);
+
 }
-	
+.recovered p{
+	color:rgb(102, 187, 106)
+}
   
+`
+
+export const StyledCharts = styled.div`
+
+    height: 50%!important;
+    width: 100%;
+
+.chart{
+    width: 50%!important;
+    margin-top:240px!important;
+    margin-bottom:240px!important;
+    padding: 40px;
+    background-color: #39455f;
+    color: white;
+    display: block;
+    border-radius: 30px;
+    -webkit-box-shadow: 24px 21px 62px -4px rgba(12,13,38,1);
+	-moz-box-shadow: 24px 21px 62px -4px rgba(12,13,38,1);
+	box-shadow: 24px 21px 62px -4px rgba(12,13,38,1);
+}
+canvas{
+    background-color: #39455f
+}
 `
 
 export const StyledDate = styled.div`

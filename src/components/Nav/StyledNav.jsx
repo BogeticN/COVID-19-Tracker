@@ -4,8 +4,11 @@ import styled from 'styled-components'
 export const StyledNav = styled.nav`
    overflow: hidden;
    text-align: right;
-   background-color:  #39455f;
-
+   background-color:  #242c3d;
+   border-bottom:2px solid #39455f ;
+  div{
+    text-align:'left'
+  }
 `
 
 export const StyledLink = styled(Link)`

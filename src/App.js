@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
 import Home from "./components/Home/Home"
-import Login from "./components/Login"
-import Register from "./components/Register"
+import Login from "./components/Login/Login"
+import Register from "./components/Register/Register"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Nav from "./components/Nav/Nav"
 import { getAllCountries, getBalkan, getContinents, getHistoricalStats } from "./service"
-import CountryDetails from "./components/CountryDetails"
-import Footer from "./components/Footer"
+import CountryDetails from "../src/components/CountryDetails/CountryDetails"
+import Footer from './components/Footer/Footer'
 import './main.css'
 
 
@@ -27,19 +27,16 @@ const App = () => {
     }, [])
     useEffect(() => {
         getContinents().then(res => {
-            // console.log(res.data)
             setContinents(res.data)
         })
     }, [])
     useEffect(() => {
         getAllCountries().then(res => {
             setAllCountries(res.data)
-            // console.log(res.data)
         })
     }, [])
     useEffect(() => {
         getBalkan().then(res => {
-            // console.log(res.data)
             setBalkanCountries(res.data)
         })
     }, [])

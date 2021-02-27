@@ -5,7 +5,7 @@ import { StyledTable } from "./StyledTable"
 import { StyledDiv } from './StyledInput'
 // import { StyledPage } from './StyledButtons'
 
-function rangeArray(start, finish) {
+function rangeArray(start, finish) {    
     let tmp = []
     for (let i = start; i < finish; i++) {
         tmp.push(i)
@@ -48,8 +48,6 @@ const Countries = ({ allCountries }) => {
 
 
             {pagesNumbers.map(pageNumber => <button className="btn btn-secondary" key={pageNumber} onClick={() => setPage(pageNumber)}>{pageNumber}</button>)}
-
-
         </div>
     )
 }

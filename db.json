@@ -29,6 +29,24 @@
       "email": "asdz@asdz.com",
       "password": "Asdfs1",
       "id": 5
+    },
+    {
+      "username": "asdd",
+      "email": "a@s",
+      "password": "Asdf1s",
+      "id": 6
+    },
+    {
+      "username": "Perac",
+      "email": "Asd@asd.com",
+      "password": "Asdfdsd1",
+      "id": 7
+    },
+    {
+      "username": "Asda",
+      "email": "A@A.com",
+      "password": "Asdfgg1",
+      "id": 8
     }
   ]
 }

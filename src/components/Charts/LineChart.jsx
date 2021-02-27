@@ -1,8 +1,8 @@
 import { Line } from 'react-chartjs-2'
 
 
-const LineChart = ({days,cases,deaths,recovered} ) => {
-    
+const LineChart = ({ days, cases, deaths, recovered }) => {
+
 
     // console.log(days)
     // console.log(recovered)
@@ -10,38 +10,39 @@ const LineChart = ({days,cases,deaths,recovered} ) => {
         labels: days,
         datasets: [
             {
-                label: 'Total cases over time',
+                label: 'Total cases',
                 data: cases,
-                borderColor: ['rgba(255, 206, 86, 0.2)'],
-                backgroundColor: ['rgba(255, 206, 86, 0.2)'],
-                pointBackgroundColor: 'rgba(255, 206, 86, 0.2)',
-                pointBorderColor: 'rgba(255, 206, 86, 0.2)',
+                borderColor: ['rgb(209, 153, 10, 0.2)'],
+                backgroundColor: ['rgb(209, 153, 10, 0.2)'],
+                pointBackgroundColor: 'rgb(209, 153, 10, 0.2)',
+                pointBorderColor: ' rgb(209, 153, 10, 0.2)'
             },
             {
-                label:'Deaths',
-                data:deaths,
-                borderColor: ['rgba(255, 128, 128, 0.2)'],
-                backgroundColor: ['rgba(255, 128, 128, 0.2)'],
-                pointBackgroundColor: 'rgba(255, 128, 128, 0.2)',
-                pointBorderColor: 'rgba(255, 128, 128, 0.2)'
+                label: 'Deaths',
+                data: deaths,
+                borderColor: ['rgb(148, 11, 11, 0.2)'],
+                backgroundColor: ['rgb(148, 11, 11, 0.2)'],
+                pointBackgroundColor: 'rgb(148, 11, 11, 0.2)',
+                pointBorderColor: 'rgb(148, 11, 11, 0.2)'
             },
             {
-                label:'Recovered',
-                data:recovered,
-                borderColor: ['rgba(193, 240, 193, 0.4)'],
-                backgroundColor: ['rgba(193, 240, 193, 0.4)'],
-                pointBackgroundColor: 'rgba(193, 240, 193, 0.4)',
-                pointBorderColor: 'rgba(193, 240, 193, 0.4)'
+                label: 'Recovered',
+                data: recovered,
+                borderColor: ['rgb(11, 114, 20, 0.4)'],
+                backgroundColor: ['rgb(11, 114, 20, 0.4)'],
+                pointBackgroundColor: 'rgb(11, 114, 20, 0.4)',
+                pointBorderColor: 'rgb(11, 114, 20, 0.4)'
             }
         ],
     }
     const options = {
-        title:{
-            display:true,
+        title: {
+            display: true,
             text: 'Total cases over time',
-            fontColor:'white'
+            fontColor: 'white',
+            fontSize: 20
         },
-        scales:{
+        scales: {
             yAxes: [
                 {
                     ticks: {
@@ -54,7 +55,7 @@ const LineChart = ({days,cases,deaths,recovered} ) => {
             ],
             xAxes: [{
                 gridLines: {
-                    display: true, 
+                    display: true,
                 },
                 ticks: {
                     fontColor: "white",
@@ -64,13 +65,13 @@ const LineChart = ({days,cases,deaths,recovered} ) => {
         legend: {
             labels: {
                 fontSize: 13,
-                fontColor:'white'
+                fontColor: 'white'
             }
         }
     }
     return (
         <>
-            <Line data={data} options={options}/>
+            <Line data={data} options={options} />
         </>
     )
 }

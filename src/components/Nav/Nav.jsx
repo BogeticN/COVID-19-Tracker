@@ -9,16 +9,15 @@ const Nav = ({ user, setUser }) => {
                 {
                     user
                         ?
-                        <button onClick={() => setUser(null)}>Log out</button>
+                        <button className='btn btn-secondary' onClick={() => setUser(null)}>Log out</button>
                         :
                         <>
                             <StyledLink to="/login">Login</StyledLink>
                             <StyledLink to="/register">Register</StyledLink>
                         </>
                 }
-
             </StyledNav>
-            <h1 style={{textAlign:'left'}}>Covid-19 Tracker</h1>
+            <h1 style={{ textAlign: 'left' }}>Covid-19 Tracker</h1>
         </header>
     )
 }

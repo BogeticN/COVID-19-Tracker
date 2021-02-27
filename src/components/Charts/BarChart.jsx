@@ -19,43 +19,43 @@ const BarChart = ({ balkanCountries }) => {
                 label: 'Total cases ',
                 data: allCasesBalkan ,
                 backgroundColor: [
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)'],
+                    'rgb(209, 153, 10)',
+                    'rgb(209, 153, 10)',
+                    'rgb(209, 153, 10)',
+                    'rgb(209, 153, 10)',
+                    'rgb(209, 153, 10)',
+                    'rgb(209, 153, 10)',
+                    'rgb(209, 153, 10)',
+                    'rgb(209, 153, 10)',
+                    'rgb(209, 153, 10)'],
             },
             {
-                label: 'Total deaths ',
+                label: 'Deaths',
                 data: deathsCountriesBalkan ,
                 backgroundColor: [
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)'],
+                    'rgb(148, 11, 11)',
+                    'rgb(148, 11, 11)',
+                    'rgb(148, 11, 11)',
+                    'rgb(148, 11, 11)',
+                    'rgb(148, 11, 11)',
+                    'rgb(148, 11, 11)',
+                    'rgb(148, 11, 11)',
+                    'rgb(148, 11, 11)',
+                    'rgb(148, 11, 11)'],
             },
             {
-                label: 'Total recovered ',
+                label: 'Recovered',
                 data: recoveredCountriesBalkan ,
                 backgroundColor: [
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(255, 206, 86, 0.2)'],
+                    'rgb(11, 114, 20)',
+                    'rgb(11, 114, 20)',
+                    'rgb(11, 114, 20)',
+                    'rgb(11, 114, 20)',
+                    'rgb(11, 114, 20)',
+                    'rgb(11, 114, 20)',
+                    'rgb(11, 114, 20)',
+                    'rgb(11, 114, 20)',
+                    'rgb(11, 114, 20)'],
             }
         ]
     }
@@ -63,7 +63,8 @@ const BarChart = ({ balkanCountries }) => {
         title: {
             display: true,
             text: 'Balkan peninsula statistics',
-            fontColor:'white'
+            fontColor:'white',
+            fontSize: 20
         },
         scales:{
             yAxes:[
@@ -87,7 +88,8 @@ const BarChart = ({ balkanCountries }) => {
         legend: {
             labels: {
                 fontSize: 13,
-                fontColor:'white'
+                fontColor:'white',
+                
             }
         }
         

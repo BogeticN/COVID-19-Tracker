@@ -4,8 +4,7 @@ import BarChart from "../Charts/BarChart"
 import Countries from "../Countries/Countries"
 import PieChart from "../Charts/PieChart"
 import LineChart from "../Charts/LineChart"
-import { StyledHome } from './StyledHome'
-import { StyledDate } from './StyledHome'
+import { StyledCharts, StyledHome,StyledDate } from './StyledHome'
 
 
 const Home = ({ balkanCountries, continents, allCountries, historyStats, days, cases, deaths, recovered }) => {
@@ -15,22 +14,21 @@ const Home = ({ balkanCountries, continents, allCountries, historyStats, days, c
     useEffect(() => {
         getWorldStats().then(res => {
             setWorldStats(res.data)
-            // console.log(res.data)
         })
     }, [])
 
 
     return (
-        <>
-            <h1 style={{ textAlign: 'center' }}>World statistics</h1>
+        <>  
+            <h1 >World statistics</h1>
             <StyledDate className='date'>Last updated:<p>{String(new Date(worldStats.updated).toLocaleString())}</p></StyledDate>
             <StyledHome >
                 <div className="text-card total-cases" >
                     <div className="heading">
-                        <h2>{worldStats.cases?.toLocaleString()}</h2>
+                        <p>{worldStats.cases?.toLocaleString()}</p>
                     </div>
                     <div className="text-box">
-                        <p style={{ color: 'rgb(133, 131, 131)', height: '73px' }}>Total cases</p>
+                        <p>Total cases</p>
                     </div>
                 </div>
                 <div className="text-card deaths">
@@ -38,7 +36,7 @@ const Home = ({ balkanCountries, continents, allCountries, historyStats, days, c
                         <p>{worldStats.deaths?.toLocaleString()}</p>
                     </div>
                     <div className="text-box" >
-                        <p style={{ color: 'rgb(194, 88, 88)' }}>Deaths</p>
+                        <p>Deaths</p>
                     </div>
                 </div>
                 <div className="text-card recovered" >
@@ -46,31 +44,32 @@ const Home = ({ balkanCountries, continents, allCountries, historyStats, days, c
                         <p>{worldStats.recovered?.toLocaleString()}</p>
                     </div>
                     <div className="text-box">
-                        <p style={{ color: 'rgb(102, 187, 106)' }}>Recovered</p>
+                        <p>Recovered</p>
                     </div>
                 </div>
                 <div className="text-card active">
                     <div className="heading">
-                        <p >{worldStats.active?.toLocaleString()}</p>
+                        <p>{worldStats.active?.toLocaleString()}</p>
                     </div>
                     <div className="text-box">
-                        <p style={{ color: 'rgb(102, 117, 187)' }}>Active</p>
+                        <p>Active</p>
                     </div>
                 </div>
             </StyledHome>
 
             <Countries allCountries={allCountries} />
-            <div className="test">
-                <div className="test1">
+
+            <StyledCharts >
+                <div className="chart">
                     <LineChart historyStats={historyStats} days={days} deaths={deaths} cases={cases} recovered={recovered} />
                 </div>
-                <div className="test1">
+                <div className="chart">
                     <PieChart continents={continents} />
                 </div>
-                <div className="test1">
+                <div className="chart">
                     <BarChart balkanCountries={balkanCountries} />
                 </div>
-            </div>
+            </StyledCharts>
         </>
     )
 }
