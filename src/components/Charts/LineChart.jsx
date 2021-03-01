@@ -3,9 +3,6 @@ import { Line } from 'react-chartjs-2'
 
 const LineChart = ({ days, cases, deaths, recovered }) => {
 
-
-    // console.log(days)
-    // console.log(recovered)
     const data = {
         labels: days,
         datasets: [

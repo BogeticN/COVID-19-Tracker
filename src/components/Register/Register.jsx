@@ -14,24 +14,23 @@ const Register = () => {
 
     const history = useHistory()
 
-    console.log(password)
     let regEx = /(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])/
+    let emailRegEx = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
 
-    const validData = (password, username) => username?.length >= 4 && password?.length >= 6 && regEx.test(password)
+    const validData = (password, username,email) => username?.length >= 4 && password?.length >= 6 && regEx.test(password) && emailRegEx.test(email)
 
     const errorType = () => {
         if (!regEx.test(password)) setError('Password must contain at least one upper case,one lower case,and one number')
         if (password?.length < 6) setError('Password must have at least 6 characters')
         if (username?.length < 4) setError('Username must have at least 4 characters')
+        if (!emailRegEx.test(email)) setError('Invalid email adress')
     }
     return (
         <StyledRegister >
             <form onSubmit={e => {
                 e.preventDefault()
-                if (!validData(password, username)) {
+                if (!validData(password, username,email)) {
                     errorType()
-                    console.log(password);
-                    console.log(validData(password, username))
                     return
                 }
                 getAllUsers().then(res => {
@@ -41,7 +40,7 @@ const Register = () => {
                         })
                     }
                     else {
-                        console.log('User already exists')
+                        window.alert('User already exists')
                     }
                     console.log(res.data)
                 })

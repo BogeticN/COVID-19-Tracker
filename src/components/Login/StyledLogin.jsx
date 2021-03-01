@@ -31,4 +31,11 @@ export const StyledLogin = styled.div`
     padding-left:100px;
     padding-right:100px;
 }
+input[type=text]{
+    margin-right:7px;
+}
+.div-submit{
+    padding:15px;
+    margin:40px;
+}
 `

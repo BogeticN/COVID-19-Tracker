@@ -46,7 +46,6 @@ const App = () => {
     let deaths = Object.values(historyStats.deaths ? historyStats.deaths : historyStats)
     let recovered = Object.values(historyStats.recovered ? historyStats.recovered : historyStats)
 
-
     return (
         <>
             <Router>

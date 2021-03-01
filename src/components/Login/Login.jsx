@@ -25,10 +25,10 @@ const Login = ({ setUser, user }) => {
                     }
                 })
             }}>
-                <div >
-                    <div style={{ marginRight: '7px' }}>Username: <input type="text" placeholder="Username..." onChange={e => setUsername(e.target.value)} /></div>
+                <div>
+                    <div>Username: <input type="text" placeholder="Username..." onChange={e => setUsername(e.target.value)} /></div>
                     <div>Password: <input type="password" placeholder="Password..." onChange={e => setPassword(e.target.value)} /></div>
-                    <div style={{ padding: '15px', margin: '40px' }}><input type="submit" className="btn btn-secondary" style={{ paddingLeft: '50px', paddingRight: '50px' }}  value="Login" /></div>
+                    <div className="div-submit"><input type="submit" className="btn btn-secondary" style={{ paddingLeft: '50px', paddingRight: '50px' }}  value="Login" /></div>
                 </div>
             </form>
             {user ?

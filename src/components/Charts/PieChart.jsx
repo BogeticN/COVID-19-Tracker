@@ -3,10 +3,6 @@ import { Pie } from 'react-chartjs-2'
 
 const PieChart = ({ continents }) => {
 
-
-    // console.log(days)
-    // console.log(recovered)
-
     let allContinents = continents.map(continent => continent.continent)
     let allCases = continents.map(continent => continent.cases)
 

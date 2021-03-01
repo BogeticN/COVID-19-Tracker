@@ -17,10 +17,9 @@ const Home = ({ balkanCountries, continents, allCountries, historyStats, days, c
         })
     }, [])
 
-
     return (
         <>  
-            <h1 >World statistics</h1>
+            <h1>World statistics</h1>
             <StyledDate className='date'>Last updated:<p>{String(new Date(worldStats.updated).toLocaleString())}</p></StyledDate>
             <StyledHome >
                 <div className="text-card total-cases" >

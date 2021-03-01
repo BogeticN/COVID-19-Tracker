@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledDiv = styled.div`
+export const StyledInput = styled.div`
     margin-top:1rem;
     display: flex;
     flex-direction: row!important;

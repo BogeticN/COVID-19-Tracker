@@ -91,9 +91,6 @@ canvas{
 export const StyledDate = styled.div`
     
 	font-size: 10px!important;
-	text-align: center;
-	display: block;
-	height: 13px;
      p {
 	font-size: 11px!important;
 }

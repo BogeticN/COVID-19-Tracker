@@ -3,7 +3,7 @@ import { Redirect, useParams } from "react-router-dom"
 import { getOneCountryHistory } from "../../service"
 import SingleLineChart from "../Charts/SingleLineChart"
 import SingleDoughnutChart from "../Charts/SingleDoughnutChart"
-import { StyledCharts, StyledHome } from "../Home/StyledHome"
+import { StyledCharts } from "../Home/StyledHome"
 import { StyledCountryDetails } from "./StyledCountryDetails"
 
 const CountryDetails = ({ allCountries, user }) => {
@@ -104,19 +104,16 @@ const CountryDetails = ({ allCountries, user }) => {
             </StyledCountryDetails >
 
             <StyledCharts>
-                <div className="chart" style={{ marginBottom: '3110px' }}>
-                    <SingleDoughnutChart countryDetail={countryDetail} />
-                </div>
-            </StyledCharts>
-
-            {oneCountryHistory ?
-                <StyledCharts>
+                    <div className="chart" style={{ marginBottom: '3110px' }}>
+                    <   SingleDoughnutChart countryDetail={countryDetail} />
+                    </div>
+                {oneCountryHistory ?
                     <div className="chart">
                         <SingleLineChart days={days} cases={cases} deaths={deaths} recovered={recovered} />
                     </div>
-                </StyledCharts>
-                :
-                null}
+                    :
+                    null}
+            </StyledCharts>
         </>
     )
         :

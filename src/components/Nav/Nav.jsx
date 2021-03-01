@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import { StyledLink, StyledNav } from './StyledNav'
 
 const Nav = ({ user, setUser }) => {

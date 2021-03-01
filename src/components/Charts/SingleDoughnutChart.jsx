@@ -3,7 +3,6 @@ import { Doughnut } from 'react-chartjs-2'
 
 const SingleDoughnutChart = ({ countryDetail }) => {
 
-
     const data = {
         labels: ['Total cases', 'Active', 'Deaths', 'Recovered'],
         datasets: [

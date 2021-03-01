@@ -3,10 +3,6 @@ import { Bar } from 'react-chartjs-2'
 
 const BarChart = ({ balkanCountries }) => {
 
-
-    // console.log(days)
-    // console.log(recovered)
-
     let allCasesBalkan = balkanCountries.map(country => country.cases)
     let allCountriesBalkan = balkanCountries.map(country => country.country)
     let deathsCountriesBalkan = balkanCountries.map(country => country.deaths)

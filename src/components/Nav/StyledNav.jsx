@@ -6,9 +6,6 @@ export const StyledNav = styled.nav`
    text-align: right;
    background-color:  #242c3d;
    border-bottom:2px solid #39455f ;
-  div{
-    text-align:'left'
-  }
 `
 
 export const StyledLink = styled(Link)`

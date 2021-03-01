@@ -1,7 +1,8 @@
 import { Line } from 'react-chartjs-2'
 
 
-const SingleLineChart = ({ days, cases, recovered, deaths, error }) => {
+const SingleLineChart = ({ days, cases, recovered, deaths }) => {
+
     const data = {
         labels: days,
         datasets: [
