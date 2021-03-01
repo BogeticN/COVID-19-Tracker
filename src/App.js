@@ -51,16 +51,7 @@ const App = () => {
             <Router>
                 <Nav user={user} setUser={setUser} />
                 <Switch>
-                    <Route path="/login">
-                        <Login setUser={setUser} user={user} />
-                    </Route>
-                    <Route path="/register">
-                        <Register />
-                    </Route>
-                    <Route path="/:country">
-                        <CountryDetails allCountries={allCountries} user={user}/>
-                    </Route>
-                    <Route path="/">
+                    <Route exact path="/">
                         <Home
                             continents={continents}
                             allCountries={allCountries}
@@ -70,6 +61,15 @@ const App = () => {
                             recovered={recovered}
                             balkanCountries={balkanCountries}
                         />
+                    </Route>
+                    <Route path="/login">
+                        <Login setUser={setUser} user={user} />
+                    </Route>
+                    <Route path="/register">
+                        <Register />
+                    </Route>
+                    <Route path="/:country">
+                        <CountryDetails allCountries={allCountries} user={user}/>
                     </Route>
                 </Switch>
             </Router>
