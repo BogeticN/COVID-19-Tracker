@@ -18,7 +18,7 @@ const App = () => {
     const [historyStats, setHistoryStats] = useState([])
     const [continents, setContinents] = useState([])
     const [balkanCountries, setBalkanCountries] = useState([])
-    
+    const [loginUsername, setLoginUsername] = useState('')
 
     useEffect(() => {
         getHistoricalStats().then(res => {
@@ -48,8 +48,8 @@ const App = () => {
 
     return (
         <>
-            <Router>
-                <Nav user={user} setUser={setUser} />
+            <Router basename={'/COVID-19-Tracker'}>
+                <Nav user={user} loginUsername={loginUsername} setUser={setUser} />
                 <Switch>
                     <Route exact path="/">
                         <Home
@@ -63,7 +63,7 @@ const App = () => {
                         />
                     </Route>
                     <Route path="/login">
-                        <Login setUser={setUser} user={user} />
+                        <Login loginUsername={loginUsername} setLoginUsername={setLoginUsername}setUser={setUser} user={user} />
                     </Route>
                     <Route path="/register">
                         <Register />

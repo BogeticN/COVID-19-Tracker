@@ -1,6 +1,6 @@
 import { StyledLink, StyledNav } from './StyledNav'
 
-const Nav = ({ user, setUser }) => {
+const Nav = ({ user, setUser, loginUsername }) => {
     return (
         <header>
             <StyledNav >
@@ -8,7 +8,10 @@ const Nav = ({ user, setUser }) => {
                 {
                     user
                         ?
-                        <button className='btn btn-secondary' onClick={() => setUser(null)}>Log out</button>
+                        <>
+                            <span>{loginUsername}</span>
+                            <button className='btn btn-secondary' onClick={() => setUser(null)}>Log out</button>
+                        </>
                         :
                         <>
                             <StyledLink to="/login">Login</StyledLink>

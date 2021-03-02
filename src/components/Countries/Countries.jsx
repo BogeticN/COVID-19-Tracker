@@ -14,7 +14,7 @@ function rangeArray(start, finish) {
 
 const Countries = ({ allCountries }) => {
 
-    const [selectNumber, setSelectNumber] = useState(Infinity)
+    const [selectNumber, setSelectNumber] = useState(20)
     const [page, setPage] = useState(1)
     const [searchInput, setSearchInput] = useState('')
 

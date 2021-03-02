@@ -10,6 +10,7 @@ import { StyledCharts, StyledHome,StyledDate } from './StyledHome'
 const Home = ({ balkanCountries, continents, allCountries, historyStats, days, cases, deaths, recovered }) => {
 
     const [worldStats, setWorldStats] = useState([])
+    
 
     useEffect(() => {
         getWorldStats().then(res => {

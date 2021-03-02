@@ -4,9 +4,9 @@ import { Link } from "react-router-dom"
 import { getAllUsers } from "../../service"
 import { StyledLogin } from "./StyledLogin"
 
-const Login = ({ setUser, user }) => {
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
+const Login = ({ setUser, user,loginUsername,setLoginUsername }) => {
+    // const [username, setUsername] = useState('')
+    const [loginPassword, setLoginPassword] = useState('')
 
     const history = useHistory()
 
@@ -15,7 +15,7 @@ const Login = ({ setUser, user }) => {
             <form onSubmit={(e) => {
                 e.preventDefault()
                 getAllUsers().then(res => {
-                    let user = res.data.find(el => (el.username === username || el.email === username) && el.password === password)
+                    let user = res.data.find(el => (el.username === loginUsername || el.email === loginUsername) && el.password === loginPassword)
                     if (user) {
                         setUser(user)
                         history.push('/')
@@ -26,8 +26,8 @@ const Login = ({ setUser, user }) => {
                 })
             }}>
                 <div>
-                    <div>Username: <input type="text" placeholder="Username..." onChange={e => setUsername(e.target.value)} /></div>
-                    <div>Password: <input type="password" placeholder="Password..." onChange={e => setPassword(e.target.value)} /></div>
+                    <div>Username: <input type="text" placeholder="Username..." onChange={e => setLoginUsername(e.target.value)} /></div>
+                    <div>Password: <input type="password" placeholder="Password..." onChange={e => setLoginPassword(e.target.value)} /></div>
                     <div className="div-submit"><input type="submit" className="btn btn-secondary" style={{ paddingLeft: '50px', paddingRight: '50px' }}  value="Login" /></div>
                 </div>
             </form>
