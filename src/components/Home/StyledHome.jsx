@@ -16,8 +16,6 @@ export const StyledHome = styled.div`
 	-webkit-box-shadow: 24px 21px 62px -4px rgba(12,13,38,1);
 	-moz-box-shadow: 24px 21px 62px -4px rgba(12,13,38,1);
 	box-shadow: 24px 21px 62px -4px rgba(12,13,38,1);
-	/* margin-left:30px;
-	margin-right:30px; */
   }
 .text-card p{
 	font-size: 33px!important;
@@ -71,7 +69,7 @@ export const StyledCharts = styled.div`
     width: 100%;
 
 .chart{
-    width: 50%!important;
+    width: 80%!important;
     margin-top:240px!important;
     margin-bottom:240px!important;
     padding: 40px;

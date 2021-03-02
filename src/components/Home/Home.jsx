@@ -58,7 +58,7 @@ const Home = ({ balkanCountries, continents, allCountries, historyStats, days, c
 
             <Countries allCountries={allCountries} />
 
-            <StyledCharts >
+            <StyledCharts>
                 <div className="chart">
                     <LineChart historyStats={historyStats} days={days} deaths={deaths} cases={cases} recovered={recovered} />
                 </div>
