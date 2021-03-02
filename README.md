@@ -31,6 +31,11 @@ Podaci o svim registrovanim korisnicima se cuvaju na https://www.mongodb.com/ se
 - Klikom na svaku drzavu u tabeli,mozemo da vidimo detaljnije podatke o njoj 
 - Postoje i grafikoni koji prikazuju odredjenu statistiku(npr. ukupan broj slucajeva od pocetka pandemije)
 
+## ToDo Funkcionalnosti
+
+- Mogucnost da se sortiraju zemlje u tabeli po ukupnom broju zabelezenih slucajeva/smrti/oporavljenih
+- Mapa sveta sa prikazom ukupnih slucajeva
+
 ## Koriscene tehnologije
 
 - VSCode
