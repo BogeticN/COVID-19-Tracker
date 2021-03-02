@@ -2,20 +2,20 @@
 
 Pre svega potrebno je instalirati:
 
--NodeJS (v14.15.1) - https://nodejs.org/en/
--npm - package manager za NodeJS
+1. NodeJS (v14.15.1) - https://nodejs.org/en/
+2. npm - package manager za NodeJS
 
 Zatim,treba da se klonira Git repozitorijum
 
--`git clone` https://github.com/BogeticN/COVID-19-Tracker.git
--uci u projekat u root direktorijumu i pokrenti `npm install`
--posle toga, `npm start` da se pokrene aplikacija
+1. `git clone` https://github.com/BogeticN/COVID-19-Tracker.git
+2. uci u projekat u root direktorijumu i pokrenti `npm install`
+3. posle toga, `npm start` da se pokrene aplikacija
 
 Ova aplikacija takodje ima i svoj server
 
--`git clone` https://github.com/BogeticN/COVID-19-tracker-server.git
--`npm install` u root direktorijumu
--`npm start` takodje u root direktorijumu
+1. `git clone` https://github.com/BogeticN/COVID-19-tracker-server.git
+2. `npm install` u root direktorijumu
+3. `npm start` takodje u root direktorijumu(ili `npm run dev` za pokretanje sa nodemon-om)
 
 ## Opis projekta
 
@@ -26,16 +26,19 @@ Podaci o svim registrovanim korisnicima se cuvaju na https://www.mongodb.com/ se
 
 ## Funkcionalnosti
 
--postoji mogucnost registrovanja i login-a
--moguca je pretraga drzava putem Search-a kao i Select opcija koja filtrira 20,50 ili 100 drzava
--klikom na svaku drzavu u tabeli,mozemo da vidimo detaljnije podatke o njoj 
--postoje i grafikoni koji prikazuju odredjenu statistiku(npr. ukupan broj slucajeva od pocetka pandemije)
+1. postoji mogucnost registrovanja i login-a
+2. moguca je pretraga drzava putem Search-a kao i Select opcija koja filtrira 20,50 ili 100 drzava
+3. klikom na svaku drzavu u tabeli,mozemo da vidimo detaljnije podatke o njoj 
+4. postoje i grafikoni koji prikazuju odredjenu statistiku(npr. ukupan broj slucajeva od pocetka pandemije)
 
 ## Koriscene tehnologije
--VSCode
--JavaScript
--ReactJS,styled-components,react-router-dom
--Git
--ChartJS
--Bootstrap
--Google Fonts
+
+1. VSCode
+2. JavaScript
+3. ReactJS,styled-components,react-router-dom
+4. Git
+5. ChartJS
+6. Bootstrap
+7. Google Fonts
+8. Heroku
+9. MongoDB
