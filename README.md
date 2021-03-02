@@ -1,6 +1,6 @@
 ## Uputstvo za pokretanje COVID-19-Tracker aplikacije:
 
-Pre svega potrebno je instalirati:
+Pre svega potrebno je instalirati
 
 1. NodeJS (v14.15.1) - https://nodejs.org/en/
 2. npm - package manager za NodeJS
@@ -26,19 +26,19 @@ Podaci o svim registrovanim korisnicima se cuvaju na https://www.mongodb.com/ se
 
 ## Funkcionalnosti
 
-1. postoji mogucnost registrovanja i login-a
-2. moguca je pretraga drzava putem Search-a kao i Select opcija koja filtrira 20,50 ili 100 drzava
-3. klikom na svaku drzavu u tabeli,mozemo da vidimo detaljnije podatke o njoj 
-4. postoje i grafikoni koji prikazuju odredjenu statistiku(npr. ukupan broj slucajeva od pocetka pandemije)
+- Postoji mogucnost registrovanja i login-a
+- Moguca je pretraga drzava putem Search-a kao i Select opcija koja filtrira 20,50 ili 100 drzava
+- Klikom na svaku drzavu u tabeli,mozemo da vidimo detaljnije podatke o njoj 
+- Postoje i grafikoni koji prikazuju odredjenu statistiku(npr. ukupan broj slucajeva od pocetka pandemije)
 
 ## Koriscene tehnologije
 
-1. VSCode
-2. JavaScript
-3. ReactJS,styled-components,react-router-dom
-4. Git
-5. ChartJS
-6. Bootstrap
-7. Google Fonts
-8. Heroku
-9. MongoDB
+- VSCode
+- JavaScript
+- ReactJS,styled-components,react-router-dom
+- Git
+- ChartJS
+- Bootstrap
+- Google Fonts
+- Heroku
+- MongoDB
