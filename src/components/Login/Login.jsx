@@ -5,7 +5,7 @@ import { getAllUsers } from "../../service"
 import { StyledLogin } from "./StyledLogin"
 
 const Login = ({ setUser, user,loginUsername,setLoginUsername }) => {
-    // const [username, setUsername] = useState('')
+    
     const [loginPassword, setLoginPassword] = useState('')
 
     const history = useHistory()

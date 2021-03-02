@@ -11,7 +11,6 @@ const Home = ({ balkanCountries, continents, allCountries, historyStats, days, c
 
     const [worldStats, setWorldStats] = useState([])
     
-
     useEffect(() => {
         getWorldStats().then(res => {
             setWorldStats(res.data)

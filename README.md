@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+## Uputstvo za pokretanje COVID-19-Tracker aplikacije:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pre svega potrebno je instalirati:
 
-## Available Scripts
+-NodeJS (v14.15.1) - https://nodejs.org/en/
+-npm - package manager za NodeJS
 
-In the project directory, you can run:
+Zatim,treba da se klonira Git repozitorijum
 
-### `npm start`
+-`git clone` https://github.com/BogeticN/COVID-19-Tracker.git
+-uci u projekat u root direktorijumu i pokrenti `npm install`
+-posle toga, `npm start` da se pokrene aplikacija
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Ova aplikacija takodje ima i svoj server
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+-`git clone` https://github.com/BogeticN/COVID-19-tracker-server.git
+-`npm install` u root direktorijumu
+-`npm start` takodje u root direktorijumu
 
-### `npm test`
+## Opis projekta
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Cilj ovog projekta je bio da se napravi aplikacija koja prikazuje statisticke podatke o korona virusu,kako u celom svetu tako i za svaku zemlju pojedinacno.
+Svi podaci su preuzeti sa https://disease.sh/ i azuriraju se nekoliko put dnevno.
 
-### `npm run build`
+Podaci o svim registrovanim korisnicima se cuvaju na https://www.mongodb.com/ servisu
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Funkcionalnosti
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-postoji mogucnost registrovanja i login-a
+-moguca je pretraga drzava putem Search-a kao i Select opcija koja filtrira 20,50 ili 100 drzava
+-klikom na svaku drzavu u tabeli,mozemo da vidimo detaljnije podatke o njoj 
+-postoje i grafikoni koji prikazuju odredjenu statistiku(npr. ukupan broj slucajeva od pocetka pandemije)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Koriscene tehnologije
+-VSCode
+-JavaScript
+-ReactJS,styled-components,react-router-dom
+-Git
+-ChartJS
+-Bootstrap
+-Google Fonts
