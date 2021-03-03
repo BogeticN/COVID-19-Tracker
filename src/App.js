@@ -63,17 +63,17 @@ const App = () => {
                         />
                     </Route>
                     <Route path="/login">
-                        <Login loginUsername={loginUsername} setLoginUsername={setLoginUsername}setUser={setUser} user={user} />
+                        <Login loginUsername={loginUsername} setLoginUsername={setLoginUsername} setUser={setUser} user={user} />
                     </Route>
                     <Route path="/register">
                         <Register />
                     </Route>
                     <Route path="/:country">
-                        <CountryDetails allCountries={allCountries} user={user}/>
+                        <CountryDetails allCountries={allCountries} user={user} />
                     </Route>
                 </Switch>
             </Router>
-            <Footer/>
+            <Footer />
         </>
     );
 }

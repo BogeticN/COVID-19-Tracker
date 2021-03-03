@@ -7,6 +7,7 @@ import { StyledLogin } from "./StyledLogin"
 const Login = ({ setUser, user,loginUsername,setLoginUsername }) => {
     
     const [loginPassword, setLoginPassword] = useState('')
+    const [loginError,setLoginError] = useState('')
 
     const history = useHistory()
 
@@ -21,7 +22,7 @@ const Login = ({ setUser, user,loginUsername,setLoginUsername }) => {
                         history.push('/')
                     }
                     else {
-                        console.warn('You have entered an invalid username or password')
+                        setLoginError('You have entered an invalid username or password')
                     }
                 })
             }}>
@@ -31,6 +32,7 @@ const Login = ({ setUser, user,loginUsername,setLoginUsername }) => {
                     <div className="div-submit"><input type="submit" className="btn btn-secondary" style={{ paddingLeft: '50px', paddingRight: '50px' }}  value="Login" /></div>
                 </div>
             </form>
+            {loginError}
             {user ?
                 null
                 :

@@ -1,8 +1,7 @@
 import Country from "../Country"
 import { useState } from "react"
 import Select from "../Select"
-import { StyledTable } from "./StyledTable"
-import { StyledInput } from './StyledInput'
+import { StyledCountries,StyledInput } from "./StyledCountries"
 
 function rangeArray(start, finish) {    
     let tmp = []
@@ -32,7 +31,7 @@ const Countries = ({ allCountries }) => {
                 <input type="search" placeholder='Search countries...' onChange={(e) => setSearchInput(e.target.value)}></input>
             </StyledInput>
 
-            <StyledTable >
+            <StyledCountries >
                 <tbody>
                     <tr>
                         <th>Country</th>
@@ -43,7 +42,7 @@ const Countries = ({ allCountries }) => {
                     </tr>
                     {filteredCountries.slice(selectNumber * (page - 1), selectNumber * page).map(country => <Country key={country.country} country={country} />)}
                 </tbody>
-            </StyledTable>
+            </StyledCountries>
 
 
             {pagesNumbers.map(pageNumber => <button className="btn btn-secondary" key={pageNumber} onClick={() => setPage(pageNumber)}>{pageNumber}</button>)}
