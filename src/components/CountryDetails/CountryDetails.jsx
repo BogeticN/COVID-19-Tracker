@@ -14,7 +14,7 @@ const CountryDetails = ({ allCountries, user }) => {
     const deaths = oneCountryHistory ? Object.values(oneCountryHistory.timeline.deaths) : []
     const recovered = oneCountryHistory ? Object.values(oneCountryHistory.timeline.recovered) : []
     const days = oneCountryHistory ? Object.keys(oneCountryHistory.timeline.cases) : []
-    
+
     let { country } = useParams()
 
     let countryDetail = allCountries.find(c => c.country == country)
@@ -106,7 +106,7 @@ const CountryDetails = ({ allCountries, user }) => {
 
             <StyledCharts>
                     <div className="chart" style={{ marginBottom: '3110px' }}>
-                    <   SingleDoughnutChart countryDetail={countryDetail} />
+                        <SingleDoughnutChart countryDetail={countryDetail} />
                     </div>
                 {oneCountryHistory ?
                     <div className="chart">

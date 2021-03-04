@@ -9,22 +9,22 @@ Pre svega potrebno je instalirati
 
 Zatim,treba da se klonira Git repozitorijum
 
-1. `git clone` [https://github.com/BogeticN/COVID-19-Tracker.git]
+1. `git clone` https://github.com/BogeticN/COVID-19-Tracker.git
 2. Uci u projekat u root direktorijumu i pokrenuti `npm install`
 3. Posle toga, `npm start` da se pokrene aplikacija
 
 Ova aplikacija takodje ima i svoj server
 
-1. `git clone` [https://github.com/BogeticN/COVID-19-tracker-server.git]
+1. `git clone` https://github.com/BogeticN/COVID-19-tracker-server.git
 2. `npm install` u root direktorijumu
 3. `npm start` takodje u root direktorijumu (ili `npm run dev` za pokretanje sa nodemon-om)
 
 ## Opis projekta
 
 Cilj ovog projekta je bio da se napravi aplikacija koja prikazuje statisticke podatke o korona virusu,kako u celom svetu tako i za svaku zemlju pojedinacno.
-Svi podaci su preuzeti sa [https://disease.sh/] i azuriraju se nekoliko put dnevno.
+Svi podaci su preuzeti sa https://disease.sh/ i azuriraju se nekoliko put dnevno.
 
-Podaci o svim registrovanim korisnicima se cuvaju na [https://www.mongodb.com/] servisu
+Podaci o svim registrovanim korisnicima se cuvaju na https://www.mongodb.com/ servisu
 
 ## Funkcionalnosti
 
