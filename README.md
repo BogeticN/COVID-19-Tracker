@@ -1,5 +1,7 @@
 # COVID-19 Tracker
 
+http://bogeticn.github.io/COVID-19-Tracker
+
 ## Uputstvo za pokretanje COVID-19-Tracker aplikacije:
 
 Pre svega potrebno je instalirati
