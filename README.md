@@ -2,45 +2,45 @@
 
 http://bogeticn.github.io/COVID-19-Tracker
 
-## Uputstvo za pokretanje COVID-19-Tracker aplikacije:
+## Instructions to start COVID-19-Tracker application:
 
-Pre svega potrebno je instalirati
+You need to install:
 
 1. NodeJS (v14.15.1) - https://nodejs.org/en/
-2. npm - package manager za NodeJS
+2. npm - package manager for NodeJS
 
-Zatim,treba da se klonira Git repozitorijum
+Next,you should clone the repo
 
 1. `git clone` https://github.com/BogeticN/COVID-19-Tracker.git
-2. Uci u projekat u root direktorijumu i pokrenuti `npm install`
-3. Posle toga, `npm start` da se pokrene aplikacija
+2. Go to project root directory and start `npm install`
+3. After that, `npm start` to start the app
 
-Ova aplikacija takodje ima i svoj server
+This application has its own server
 
 1. `git clone` https://github.com/BogeticN/COVID-19-tracker-server.git
-2. `npm install` u root direktorijumu
-3. `npm start` takodje u root direktorijumu (ili `npm run dev` za pokretanje sa nodemon-om)
+2. `npm install` in root directory
+3. `npm start` aswell in root directory (or `npm run dev` to start with nodemon)
 
-## Opis projekta
+## Project description
 
-Cilj ovog projekta je bio da se napravi aplikacija koja prikazuje statisticke podatke o korona virusu,kako u celom svetu tako i za svaku zemlju pojedinacno.
-Svi podaci su preuzeti sa https://disease.sh/ i azuriraju se nekoliko put dnevno.
+Goal of this project was to create an application that shows world(and for each country) statistics about corona virus.All data was taken from https://disease.sh/ and it's being updated on a daily basis.
 
-Podaci o svim registrovanim korisnicima se cuvaju na https://www.mongodb.com/ servisu
+All data about registered users is saved at https://www.mongodb.com/ 
 
-## Funkcionalnosti
+## Functionality
 
-- Postoji mogucnost registrovanja i login-a
-- Moguca je pretraga drzava putem search-a kao i select opcija koja filtrira 20, 50 ili 100 drzava
-- Klikom na svaku drzavu u tabeli,mozemo da vidimo detaljnije podatke o njoj 
-- Postoje i grafikoni koji prikazuju odredjenu statistiku(npr. ukupan broj slucajeva od pocetka pandemije)
+- There is an option to register and log in.
+- There is a search input field to look for a specific country,as well as a filter to show 20,50 or 100 countries 
+- By clicking on any country in the table,we can access more detailed information about it
+- Graphs that show certain stati
+- There are also graphs showing certain statistics (e.g. total number of cases since the beginning of the pandemic)
 
-## ToDo Funkcionalnosti
+## ToDo functionality
 
-- Mogucnost da se sortiraju zemlje u tabeli po ukupnom broju zabelezenih slucajeva/smrti/oporavljenih
-- Mapa sveta sa prikazom ukupnih slucajeva
+- Option to sort countries in the table by total number of reported cases / deaths / recovered
+- World map showing total cases
 
-## Koriscene tehnologije
+## Technologies used for project
 
 - VSCode
 - JavaScript
