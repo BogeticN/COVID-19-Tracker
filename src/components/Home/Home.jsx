@@ -59,13 +59,13 @@ const Home = ({ balkanCountries, continents, allCountries, historyStats, days, c
             <Countries allCountries={allCountries} />
 
             <StyledCharts>
-                <div className="chart">
+                <div className="chart-container">
                     <LineChart historyStats={historyStats} days={days} deaths={deaths} cases={cases} recovered={recovered} />
                 </div>
-                <div className="chart">
+                <div className="chart-container">
                     <PieChart continents={continents} />
                 </div>
-                <div className="chart">
+                <div className="chart-container">
                     <BarChart balkanCountries={balkanCountries} />
                 </div>
             </StyledCharts>

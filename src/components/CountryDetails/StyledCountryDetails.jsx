@@ -2,25 +2,28 @@ import styled from 'styled-components'
 
 export const StyledCountryDetails = styled.div`
     display: grid;
-	margin-bottom: 170px;
-    margin-top:100px;
-	width: 100%;
-	height: 350px;
+	grid-template-columns: 20% 20% 20% 20%;
+	grid-gap: 35px;
+	margin:150px auto;
+	width: 70%;
+	height: 30%;
+	justify-content:space-between;
 
 .single-text-cards {
-	width: 250px;
+	width: 100%;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-	display:inline-block;
 	text-align: center;
 	background-color: #39455f;
-    margin-left:20px;
-    margin-right:20px;
+    margin:20px auto;
 	-webkit-box-shadow: 24px 21px 62px -4px rgba(12,13,38,1);
 	-moz-box-shadow: 24px 21px 62px -4px rgba(12,13,38,1);
 	box-shadow: 24px 21px 62px -4px rgba(12,13,38,1);
   }
 .single-text-cards p{
 	font-size: 25px!important;
+	width:100%;
+	overflow:hidden;
+	height:auto;
 }
 p {
     background-color:#39455f

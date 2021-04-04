@@ -19,7 +19,7 @@ This application has its own server
 
 1. `git clone` https://github.com/BogeticN/COVID-19-tracker-server.git
 2. `npm install` in root directory
-3. `npm start` aswell in root directory (or `npm run dev` to start with nodemon)
+3. `npm start` as well in root directory (or `npm run dev` to start with nodemon)
 
 ## Project description
 
@@ -32,7 +32,7 @@ All data about registered users is saved at https://www.mongodb.com/
 - There is an option to register and log in.
 - There is a search input field to look for a specific country,as well as a filter to show 20,50 or 100 countries 
 - By clicking on any country in the table,we can access more detailed information about it
-- Graphs that show certain stati
+- Graphs that show certain statistics
 - There are also graphs showing certain statistics (e.g. total number of cases since the beginning of the pandemic)
 
 ## ToDo functionality

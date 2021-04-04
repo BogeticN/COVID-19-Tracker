@@ -1,17 +1,20 @@
 import styled from 'styled-components'
-export const StyledCountries = styled.table`
+export const StyledCountries = styled.div`
 
+    overflow-x:auto;
+    width:80%;
+    margin:0 auto;
+
+  table {
     font-family: "Arial Black", Gadget, sans-serif;
     border: 2px solid #415172;
     background-color: #4A4A4A;
-    width: 60%;
-    height: 200px;
+    width: 80%;
     text-align: center;
     border-collapse: collapse;
     margin:auto;
     line-height:2.5;
-    
-    
+  }
    td, table th {
     border: 1px solid #4A4A4A;
     padding: 3px 2px;
@@ -40,24 +43,35 @@ export const StyledCountries = styled.table`
 `
 
 export const StyledInput = styled.div`
-    margin-top:1rem;
+    margin:0 auto;
     display: flex;
     flex-direction: row!important;
-    text-align: center; 
-    width:60%;
-
+    justify-content:space-between;
+    align-items:center;
+    width:64%;
 
 input { 
     margin-top:1rem;
     margin-bottom: 1rem;
-    width: 200px;
-    height: 25px;
+    width: 20%;
+    height: 100%;
 }
-.select {
-    display: inline-block;
-    height: 30px;
+select {
+    height: 100%;
     line-height: 1.8;
     margin-left: 0px;
-    
+}
+@media (max-width:768px ){
+    width:70%;
+
+  input{
+    width:40%;
+  }
+}
+@media (max-width:500px){
+    width:80%;
+    input {
+      width:50%;
+    }
 }
 `

@@ -2,13 +2,16 @@ import styled from 'styled-components'
 
 export const StyledHome = styled.div`
 
-    display: flex;
-	margin: 20px auto;
-	width: 85%;
-	height: 350px;
+	display: grid;
+	grid-template-columns: 20% 20% 20% 20%;
+	grid-gap: 35px;
+	margin:80px auto;
+	width: 80%;
+	height: 30%;
+	justify-content:center;
 
 .text-card {
-	width: 250px;
+	width: 100%;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	display:inline-block;
 	text-align: center;
@@ -20,8 +23,9 @@ export const StyledHome = styled.div`
 .text-card p{
 	font-size: 33px!important;
 	background-color: #39455f;
+	width:100%;
+	overflow:hidden;
 }
-
 .heading {
 	  padding: 40px 10px;
 	  background-color: #39455f;
@@ -60,18 +64,27 @@ export const StyledHome = styled.div`
 .recovered p{
 	color:rgb(102, 187, 106)
 }
-  
+@media (max-width:1373px){
+	grid-template-columns: 40% 40%;
+}
+@media (max-width:725px){
+	grid-template-columns: 80%;
+}
 `
 
 export const StyledCharts = styled.div`
 
-    height: 50%!important;
-    width: 100%;
 
-.chart{
+    width: 100%;
+	margin:0 auto;
+	display:flex;
+	flex-direction:column;
+
+.chart-container{
     width: 80%!important;
-    margin-top:240px!important;
-    margin-bottom:240px!important;
+	height:80vh;
+	position:relative;
+	margin:150px auto!important;
     padding: 40px;
     background-color: #39455f;
     color: white;
@@ -83,6 +96,24 @@ export const StyledCharts = styled.div`
 }
 canvas{
     background-color: #39455f
+}
+@media (max-width:670px){
+	.chart-container {
+		width:100%!important;
+		height:50vh!important;
+	}
+}
+@media (max-width:320px){
+	.chart-container {
+		height:40vh!important;
+		margin:70px auto!important;
+	}
+}
+@media (max-height:780px){
+	.chart-container{
+		margin:70px auto!important;
+		height:60vh!important;
+	}
 }
 `
 

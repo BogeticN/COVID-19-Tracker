@@ -1,9 +1,9 @@
 import Country from "../Country"
 import { useState } from "react"
 import Select from "../Select"
-import { StyledCountries,StyledInput } from "./StyledCountries"
+import { StyledCountries, StyledInput } from "./StyledCountries"
 
-function rangeArray(start, finish) {    
+function rangeArray(start, finish) {
     let tmp = []
     for (let i = start; i < finish; i++) {
         tmp.push(i)
@@ -23,30 +23,31 @@ const Countries = ({ allCountries }) => {
     let pagesNumbers = rangeArray(1, numberOfPages + 1)
 
     return (
-        <div >
+        <>
             <StyledInput >
                 <div className='select'>
                     <span>Show</span><Select setSelectNumber={setSelectNumber} /><span>countries</span>
                 </div>
-                <input type="search" placeholder='Search countries...' onChange={(e) => setSearchInput(e.target.value)}></input>
+                <input type="search" placeholder='Search...' onChange={(e) => setSearchInput(e.target.value)}></input>
             </StyledInput>
-
             <StyledCountries >
-                <tbody>
-                    <tr>
-                        <th>Country</th>
-                        <th>Total cases</th>
-                        <th>Deaths</th>
-                        <th>Recovered</th>
-                        <th>Population</th>
-                    </tr>
-                    {filteredCountries.slice(selectNumber * (page - 1), selectNumber * page).map(country => <Country key={country.country} country={country} />)}
-                </tbody>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Country</th>
+                            <th>Total cases</th>
+                            <th>Deaths</th>
+                            <th>Recovered</th>
+                            <th>Population</th>
+                        </tr>
+                        {filteredCountries.slice(selectNumber * (page - 1), selectNumber * page).map(country => <Country key={country.country} country={country} />)}
+                    </tbody>
+                </table>
             </StyledCountries>
 
 
             {pagesNumbers.map(pageNumber => <button className="btn btn-secondary" key={pageNumber} onClick={() => setPage(pageNumber)}>{pageNumber}</button>)}
-        </div>
+        </>
     )
 }
 

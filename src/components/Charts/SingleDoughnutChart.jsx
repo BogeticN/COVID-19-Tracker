@@ -30,7 +30,8 @@ const SingleDoughnutChart = ({ countryDetail }) => {
             labels: {
                 fontColor: 'white'
             }
-        }
+        },
+        maintainAspectRatio:false
     }
     return (
         <>

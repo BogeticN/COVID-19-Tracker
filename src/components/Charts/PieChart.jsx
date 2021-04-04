@@ -36,7 +36,8 @@ const PieChart = ({ continents }) => {
             labels: {
                 fontColor: 'white'
             }
-        }
+        },
+        maintainAspectRatio:false
     }
     return (
         <>

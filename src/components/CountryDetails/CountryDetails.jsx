@@ -33,81 +33,78 @@ const CountryDetails = ({ allCountries, user }) => {
             <h1>{countryDetail?.country}</h1>
 
             <StyledCountryDetails >
-                <div>
-                    <div className="single-text-cards total-cases" >
-                        <div className="heading">
-                            <p> {countryDetail?.cases.toLocaleString()}</p>
-                        </div>
-                        <div className="text-box">
-                            <p>Total cases</p>
-                        </div>
+                <div className="single-text-cards total-cases" >
+                    <div className="heading">
+                        <p> {countryDetail?.cases.toLocaleString()}</p>
                     </div>
-                    <div className="single-text-cards recovered" >
-                        <div className="heading">
-                            <p> {countryDetail?.recovered.toLocaleString()}</p>
-                        </div>
-                        <div className="text-box">
-                            <p>Recovered</p>
-                        </div>
-                    </div>
-                    <div className="single-text-cards deaths" >
-                        <div className="heading">
-                            <p> {countryDetail?.deaths.toLocaleString()}</p>
-                        </div>
-                        <div className="text-box">
-                            <p>Deaths</p>
-                        </div>
-                    </div>
-                    <div className="single-text-cards critical" >
-                        <div className="heading">
-                            <p> {countryDetail?.critical.toLocaleString()}</p>
-                        </div>
-                        <div className="text-box">
-                            <p>Critical</p>
-                        </div>
+                    <div className="text-box">
+                        <p>Total cases</p>
                     </div>
                 </div>
-                <div style={{ marginTop: '50px', marginBottom: '50px' }}>
-                    <div className="single-text-cards population" >
-                        <div className="heading">
-                            <p> {countryDetail?.population.toLocaleString()}</p>
-                        </div>
-                        <div className="text-box">
-                            <p>Population</p>
-                        </div>
+                <div className="single-text-cards recovered" >
+                    <div className="heading">
+                        <p> {countryDetail?.recovered.toLocaleString()}</p>
                     </div>
-                    <div className="single-text-cards tests" >
-                        <div className="heading">
-                            <p> {countryDetail?.tests.toLocaleString()}</p>
-                        </div>
-                        <div className="text-box" >
-                            <p>Tests</p>
-                        </div>
-                    </div>
-                    <div className="single-text-cards today-cases" >
-                        <div className="heading">
-                            <p> {countryDetail?.todayCases.toLocaleString()}</p>
-                        </div>
-                        <div className="text-box">
-                            <p>Today cases</p>
-                        </div>
-                    </div>
-                    <div className="single-text-cards today-deaths" >
-                        <div className="heading">
-                            <p> {countryDetail?.todayDeaths.toLocaleString()}</p>
-                        </div>
-                        <div className="text-box">
-                            <p>Today deaths</p>
-                        </div>
+                    <div className="text-box">
+                        <p>Recovered</p>
                     </div>
                 </div>
+                <div className="single-text-cards deaths" >
+                    <div className="heading">
+                        <p> {countryDetail?.deaths.toLocaleString()}</p>
+                    </div>
+                    <div className="text-box">
+                        <p>Deaths</p>
+                    </div>
+                </div>
+                <div className="single-text-cards critical" >
+                    <div className="heading">
+                        <p> {countryDetail?.critical.toLocaleString()}</p>
+                    </div>
+                    <div className="text-box">
+                        <p>Critical</p>
+                    </div>
+                </div>
+                <div className="single-text-cards population" >
+                    <div className="heading">
+                        <p> {countryDetail?.population.toLocaleString()}</p>
+                    </div>
+                    <div className="text-box">
+                        <p>Population</p>
+                    </div>
+                </div>
+                <div className="single-text-cards tests" >
+                    <div className="heading">
+                        <p> {countryDetail?.tests.toLocaleString()}</p>
+                    </div>
+                    <div className="text-box" >
+                        <p>Tests</p>
+                    </div>
+                </div>
+                <div className="single-text-cards today-cases" >
+                    <div className="heading">
+                        <p> {countryDetail?.todayCases.toLocaleString()}</p>
+                    </div>
+                    <div className="text-box">
+                        <p>Today cases</p>
+                    </div>
+                </div>
+                <div className="single-text-cards today-deaths" >
+                    <div className="heading">
+                        <p> {countryDetail?.todayDeaths.toLocaleString()}</p>
+                    </div>
+                    <div className="text-box">
+                        <p>Today deaths</p>
+                    </div>
+                </div>
+
 
             </StyledCountryDetails >
 
             <StyledCharts>
-                    <div className="chart" style={{ marginBottom: '3110px' }}>
-                        <SingleDoughnutChart countryDetail={countryDetail} />
-                    </div>
+                <div className="chart" style={{ marginBottom: '3110px' }}>
+                    <SingleDoughnutChart countryDetail={countryDetail} />
+                </div>
                 {oneCountryHistory ?
                     <div className="chart">
                         <SingleLineChart days={days} cases={cases} deaths={deaths} recovered={recovered} />

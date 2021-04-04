@@ -87,7 +87,8 @@ const BarChart = ({ balkanCountries }) => {
                 fontColor:'white',
                 
             }
-        }
+        },
+        maintainAspectRatio:false
         
     }
     return (

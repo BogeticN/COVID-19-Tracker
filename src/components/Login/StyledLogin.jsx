@@ -3,6 +3,9 @@ import styled from 'styled-components'
 export const StyledLogin = styled.div`
 
 	width: 750px;
+    display:flex;
+    flex-direction:column;
+    margin:0 auto;
 	height: 500px; 
 	border: 1px solid black;
 	background-color:#242c3d;
@@ -35,7 +38,7 @@ input[type=text]{
     margin-right:7px;
 }
 .div-submit{
-    padding:15px;
-    margin:40px;
+    padding:30px 15px;
+    /* margin:40px; */
 }
 `

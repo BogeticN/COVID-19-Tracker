@@ -64,7 +64,8 @@ const SingleLineChart = ({ days, cases, recovered, deaths }) => {
                 fontSize: 13,
                 fontColor: 'white'
             }
-        }
+        },
+        maintainAspectRatio:false
     }
     return (
         <>

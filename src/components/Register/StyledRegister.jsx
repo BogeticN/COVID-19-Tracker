@@ -3,6 +3,9 @@ import styled from 'styled-components'
 export const StyledRegister = styled.div`
     
 	width: 750px;
+	display:flex;
+	flex-direction:column;
+	margin:0 auto;
 	height: 500px; 
 	border: 1px solid black;
 	background-color:#242c3d;
@@ -15,23 +18,16 @@ export const StyledRegister = styled.div`
 	
 }
 .email{
-	margin-left:24px;
 	background-color: #242c3d;
-	margin-right:24px;
+	margin:0 24px;
 }
 .password{
-	
 	margin-right:38px;
 	background-color: #242c3d;
 }
 .submit{
 	background-color: #242c3d;
-	padding: 15px;
-	 margin: 40px ;
-	 padding-left:40px;
-	 padding-right: 50px;
-	 
-
+	padding: 25px;
 }
 .submit input {
 	padding-left:50px;
@@ -39,7 +35,7 @@ export const StyledRegister = styled.div`
 }
 .username{
 	background-color: #242c3d;
-	margin-right:44px;
+	margin-right:45px;
 }
 .error{
     background-color: #242c3d;
