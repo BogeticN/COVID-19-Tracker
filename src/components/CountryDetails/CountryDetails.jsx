@@ -102,11 +102,11 @@ const CountryDetails = ({ allCountries, user }) => {
             </StyledCountryDetails >
 
             <StyledCharts>
-                <div className="chart" style={{ marginBottom: '3110px' }}>
+                <div className="chart-container" style={{ marginBottom: '3110px' }}>
                     <SingleDoughnutChart countryDetail={countryDetail} />
                 </div>
                 {oneCountryHistory ?
-                    <div className="chart">
+                    <div className="chart-container">
                         <SingleLineChart days={days} cases={cases} deaths={deaths} recovered={recovered} />
                     </div>
                     :

@@ -15,5 +15,6 @@ export const StyledNav = styled.nav`
 `
 
 export const StyledLink = styled(Link)`
-  padding:10px
+  padding:10px;
+  background-color:#242c3d;
 `

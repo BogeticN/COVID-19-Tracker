@@ -90,4 +90,13 @@ p {
 .critical p{
     color:#f7786b
 }
+@media(max-width:1024px){
+	grid-template-columns:40% 40%;
+}
+@media(max-width:520px){
+	grid-template-columns:80%;
+	justify-content:center;
+	align-items:center;
+	margin:80px auto;
+}
 `

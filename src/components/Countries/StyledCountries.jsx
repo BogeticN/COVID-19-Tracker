@@ -70,6 +70,7 @@ select {
 }
 @media (max-width:500px){
     width:80%;
+    
     input {
       width:50%;
     }

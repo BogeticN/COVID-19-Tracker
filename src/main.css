@@ -25,10 +25,18 @@ a{
 }
 
 input{
-	border:1px solid #49587a
+	border:1px solid #49587a;
+    background-color: #242c3d;
+}
+select {
+    background-color: #242c3d;
+}
+table *{
+    background-color: #242c3d;
 }
 @media (max-width:480px){
     h1 {
-        font-size:35px!important;
+        font-size:40px!important;
+        margin-top:70px;
     }
 }
